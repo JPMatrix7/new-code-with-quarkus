@@ -1,5 +1,4 @@
 package br.unitins.resource;
-import java.util.ArrayList;
 import java.util.List;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
@@ -9,9 +8,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import br.unitins.model.Usuario;
-
+    @Path("/usuarios")
     public class UsuarioResource {
-        @GET
+    @GET
+    @Path("/informacoes")
     @Produces(MediaType.APPLICATION_JSON)
     public Usuario test() {
         Usuario user = new Usuario();

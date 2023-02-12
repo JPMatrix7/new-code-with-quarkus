@@ -2,6 +2,7 @@ package br.unitins.model;
 import javax.persistence.Entity;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
+    @Entity
     public class Usuario extends PanacheEntity{
         private String nome;
         private String destinoFinal;
