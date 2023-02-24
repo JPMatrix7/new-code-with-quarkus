@@ -3,12 +3,10 @@ import javax.persistence.Entity;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
     @Entity
-    public class Usuario extends PanacheEntity{
+    public class Passagem extends PanacheEntity{
         private String nome;
         private String destinoFinal;
         private String origem;
-        private String assento;
-
         
         public String getNome() {
             return nome;
@@ -28,12 +26,5 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
         public void setOrigem(String origem) {
             this.origem = origem;
         }
-        public String getAssento() {
-            return assento;
-        }
-        public void setAssento(String assento) {
-            this.assento = assento;
-        }
-
-        
+                
     }
