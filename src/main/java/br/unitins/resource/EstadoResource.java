@@ -2,7 +2,6 @@ package br.unitins.resource;
 
 import javax.ws.rs.Path;
 import java.util.List;
-
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
@@ -20,7 +19,6 @@ import javax.ws.rs.Produces;
 @Path("/estados")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-
 public class EstadoResource {
 
     @Inject //O que faz?
@@ -34,7 +32,6 @@ public class EstadoResource {
         
     }
     
-
     @POST
     @Transactional
     public Estado insert(Estado estado) {
@@ -59,7 +56,7 @@ public class EstadoResource {
     }
 
     @GET
-    @Path("/quantidadesEntidade")
+    @Path("/count")
     //@Consumes(MediaType.APPLICATION_JSON)
     //@Produces(MediaType.APPLICATION_JSON)
     //@Transactional
@@ -70,7 +67,7 @@ public class EstadoResource {
 
     @GET
     @Path("/buscar/{nome}")
-    public Estado buscar(@PathParam("nome") String nome){
+    public List<Estado> search(@PathParam("nome") String nome){
         return repository.findByNome(nome);
     }
 

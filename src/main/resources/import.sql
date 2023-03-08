@@ -6,3 +6,7 @@
 insert into passagem (id, nome, origem, destinoFinal) values (nextval('hibernate_sequence'), 'Paulo', 'Palmas-TO', 'Brasília-DF');
 insert into passagem (id, nome, origem, destinoFinal) values (nextval('hibernate_sequence'), 'Jânio', 'Palmas-TO', 'Brasília-DF');
 insert into passagem (id, nome, origem, destinoFinal) values (nextval('hibernate_sequence'), 'Bruno', 'Palmas-TO', 'São Paulo-SP');
+
+
+insert into cidade (nome, id_estado) values('Palmas', 1);
+insert into cidade (nome, id_estado) values('Paraíso', 1);
